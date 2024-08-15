@@ -13,6 +13,12 @@ module.exports = {
         "bold-dark": "#333",
         "light-dark": "#797979",
         "light-white": "#f3f3f3",
+        "light-blue": "#d8dff3",
+        "light-grey": "#E7EBF4",
+        "back-blue": "#DEE0E7",
+        pink:'#FAA1CC',
+        green:'#B1FBB4',
+        'bold-pink':'#55246A'
       },
       spacing: {
         "40x": "40%",

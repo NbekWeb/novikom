@@ -4,134 +4,126 @@ import IconDots from "./icons/IconDots.vue";
 import IconTrain from "./icons/IconTrain.vue";
 import IconEmail from "./icons/IconEmail.vue";
 
+import KupeCard from "./KupeCard.vue";
+
 import { ref } from "vue";
 
 const show = ref(false);
+const selectPlace = ref(-1);
 
 const toggleShow = () => {
   show.value = !show.value;
 };
 
-const columns = [
-  { title: "Вагон", dataIndex: "vagon" },
-  {
-    title: "Тип вагона",
-    dataIndex: "type",
-  },
-  {
-    title: " Класс обслуживания",
-    dataIndex: "class",
-  },
-  {
-    title: " Количество мест ",
-    dataIndex: "numPlace",
-  },
-  {
-    title: "  Стоимость ",
-    dataIndex: "price",
-  },
-  {
-    title: " ",
-    dataIndex: "action",
-  },
-];
+const toggleSelectPlace = (i) => {
+  if (selectPlace.value == i) {
+    selectPlace.value = -1;
+  } else {
+    selectPlace.value = i;
+  }
+};
+
+const column = {
+  vagon: "Вагон",
+  type: "Тип вагона",
+  class: " Класс обслуживания",
+  numPlace: " Количество мест",
+  price: "Стоимость",
+  action: "",
+};
 
 const dataSource = [
   {
     vagon: "07",
     type: "Купе",
-    class: [
-      "Вагон открытого типа (плацкартный). ",
-      "Кондиционер, биотуалет в вагоне. ",
-      "Вагон с услугой перевозки животных",
-    ],
-    numPlace: ["24 места:", " 5 нижних,", "19 верхних"],
+    class:
+      "Вагон открытого типа (плацкартный). Кондиционер, биотуалет в вагоне.Вагон с услугой перевозки животных ",
+    numPlace: "24 места : 5 нижних , 19 верхних",
     price: "от 6370,00 баллов",
   },
   {
     vagon: "07",
     type: "Купе",
-    class: [
-      "Вагон открытого типа (плацкартный). ",
-      "Кондиционер, биотуалет в вагоне. ",
-      "Вагон с услугой перевозки животных",
-    ],
-    numPlace: ["24 места:", " 5 нижних,", "19 верхних"],
+    class:
+      "Вагон открытого типа (плацкартный). Кондиционер, биотуалет в вагоне.Вагон с услугой перевозки животных ",
+    numPlace: "24 места : 5 нижних , 19 верхних",
     price: "от 6370,00 баллов",
   },
   {
     vagon: "07",
     type: "Купе",
-    class: [
-      "Вагон открытого типа (плацкартный). ",
-      "Кондиционер, биотуалет в вагоне. ",
-      "Вагон с услугой перевозки животных",
-    ],
-    numPlace: ["24 места:", " 5 нижних,", "19 верхних"],
+    class:
+      "Вагон открытого типа (плацкартный). Кондиционер, биотуалет в вагоне.Вагон с услугой перевозки животных ",
+    numPlace: "24 места : 5 нижних , 19 верхних",
     price: "от 6370,00 баллов",
   },
   {
     vagon: "07",
     type: "Купе",
-    class: [
-      "Вагон открытого типа (плацкартный). ",
-      "Кондиционер, биотуалет в вагоне. ",
-      "Вагон с услугой перевозки животных",
-    ],
-    numPlace: ["24 места:", " 5 нижних,", "19 верхних"],
+    class:
+      "Вагон открытого типа (плацкартный). Кондиционер, биотуалет в вагоне.Вагон с услугой перевозки животных ",
+    numPlace: "24 места : 5 нижних , 19 верхних",
     price: "от 6370,00 баллов",
   },
 ];
 </script>
 <template>
-  <div class="border rounded-lg p-4">
-    <div class="flex items-center justify-between">
+  <div class="p-4 border rounded-lg">
+    <div class="flex items-center justify-between max-lg:hidden">
       <div class="flex-grow">
-        <p class="text-light-dark text-xl font-semibold">
-          804Ч Ласточка-премиум
+        <p class="text-xl font-semibold text-light-dark">
+          804Ч <span class="text-bold-dark"> асточка-премиум</span>
         </p>
         <div class="flex justify-between mt-4">
-          <div class="flex flex-col gap-0 text-light-dark text-sm">
-            <span class="text-2xl font-medium text-bold-dark mb-2">
+          <div class="flex flex-col gap-0 text-sm text-light-dark">
+            <span class="mb-2 text-2xl font-medium text-bold-dark">
               06:32
             </span>
             <span> Санкт-Петербург Ладож. </span>
             <span> 18 мая, сб </span>
           </div>
-          <div class="gap-2 text-light-dark text-sm flex items-center">
+          <div class="flex items-center gap-2 text-sm text-light-dark">
             <icon-circle />
             <icon-dots />
             <span>14ч20м</span>
             <icon-dots />
             <icon-train />
           </div>
-          <div class="flex flex-col items-end text-light-dark text-sm gap-0">
-            <span class="text-bold-dark text-2xl mb-2 font-medium">11:57 </span>
+          <div class="flex flex-col items-end gap-0 text-sm text-light-dark">
+            <span class="mb-2 text-2xl font-medium text-bold-dark">11:57 </span>
             <span>Петрозаводск-Пасс</span>
             <span>18 мая, сб</span>
           </div>
           <div
-            class="flex flex-col items-end text-light-dark text-sm justify-between"
+            class="flex flex-col items-end justify-between text-sm text-light-dark"
           >
-            <span class="text-bold-dark text-2xl mb-2 font-medium"
+            <span class="mb-2 text-2xl font-medium text-bold-dark"
               >8д 14ч 20м
             </span>
-            <span class="flex gap-1 items-center">
-              <icon-email />
-              Электронная регистрация</span
-            >
+            <a-popover placement="bottom" class="">
+              <template #content>
+                <p class="mb-0 max-w-[230px]">
+                  Доступна электронная регистрация. С ней для посадки в поезд
+                  понадобится только
+                </p>
+              </template>
+              <span class="flex items-center gap-1">
+                <icon-email />
+                Электронная регистрация</span
+              >
+            </a-popover>
           </div>
         </div>
       </div>
-      <div class="pl-6 border-l ml-4">
-        <div class="flex flex-col text-xs text-light-dark gap-0">
-          <span class="text-lg text-bold-dark font-semibold">
+      <div class="pl-6 ml-4 border-l">
+        <div class="flex flex-col gap-0 text-xs text-light-dark">
+          <span class="text-lg font-semibold text-bold-dark">
             от 113 796,00
           </span>
           <span class="-mt-2"> за всех пассажиров </span>
         </div>
         <button
-          class="rounded py-2 px-10 mt-5"
+          class="px-10 py-2 mt-5 border rounded border-bold-blue"
           :class="show ? 'bg-main text-bold-dark' : 'text-white bg-bold-blue'"
           @click="toggleShow"
         >
@@ -140,36 +132,139 @@ const dataSource = [
         </button>
       </div>
     </div>
-    <div class="pl-2 mt-6" v-if="show">
-      <a-table :data-source="dataSource" :columns="columns" :pagination="false">
-        <template #bodyCell="{ column, text }">
-          <template v-if="column.dataIndex === 'vagon'">
-            <span class="text-bold-dark font-bold">{{ text }}</span>
-          </template>
-          <template v-if="column.dataIndex === 'type'">
-            <span class="text-light-dark">{{ text }}</span>
-          </template>
-          <template v-if="column.dataIndex === 'class'">
-            <p class="text-light-dark mb-0" v-for="(val, i) of text" :key="i">
-              {{ val }}
+    <div class="lg:hidden">
+      <div class="flex items-center justify-between">
+        <p class="mb-0 text-xl font-semibold text-light-dark max-xs:text-base">
+          804Ч <span class="text-bold-dark"> асточка-премиум</span>
+        </p>
+        <a-popover placement="bottomRight" class="">
+          <template #content>
+            <p class="mb-0 max-w-[200px] text-xs">
+              Доступна электронная регистрация. С ней для посадки в поезд
+              понадобится только
             </p>
           </template>
-          <template v-if="column.dataIndex === 'numPlace'">
-            <p class="text-light-dark mb-0" v-for="(val, i) of text" :key="i">
-              {{ val }}
-            </p>
-          </template>
-          <template v-if="column.dataIndex === 'price'">
-            <span class="text-bold-dark font-bold">{{ text }}</span>
-          </template>
-          <template v-if="column.dataIndex === 'action'">
-            <a-button
-              class="border-bold-blue/80 text-bold-blue/80 hover:!border-bold-blue hover:!text-bold-blue font-semibold"
-              >Выбрать места</a-button
-            >
-          </template>
-        </template>
-      </a-table>
+          <span class="flex items-center gap-1 text-sm">
+            <icon-email class="max-sm:text-xl" />
+            <span class="max-sm:hidden"> Электронная регистрация </span>
+            <span class="sm:hidden"> Эл.рег. </span>
+          </span>
+        </a-popover>
+      </div>
+      <div
+        class="flex justify-between mt-2 text-base font-semibold max-sm:gap-1 text-bold-dark sm:gap-4"
+      >
+        <span>06:32</span>
+        <span
+          class="flex items-center flex-grow gap-1 text-xs font-normal text-light-dark"
+        >
+          <span class="min-w-16 h-[1px] bg-light-dark/60 flex-grow"></span>
+          <span>14ч20м</span>
+          <span class="min-w-16 h-[1px] bg-light-dark/60 flex-grow"></span>
+        </span>
+        <span>09:32</span>
+      </div>
+      <div
+        class="flex justify-between gap-3 mt-2 text-xs text-light-dark max-sm:gap-2"
+      >
+        <p>Санкт-Петербург, Санкт-Петербург Ладож.</p>
+        <p>Санкт-Петербург, Санкт-Петербург Ладож.</p>
+      </div>
+      <button
+        class="px-10 py-2 mt-5 border rounded max-sm:w-full border-bold-blue"
+        :class="show ? 'bg-main text-bold-dark' : 'text-white bg-bold-blue '"
+        @click="toggleShow"
+      >
+        <span>от 113 796,00</span>
+      </button>
+    </div>
+    <div class="flex flex-col pl-2 mt-6 gap-y-0 max-lg:hidden" v-if="show">
+      <a-row
+        class="flex justify-between px-4 py-2 text-sm rounded-lg bg-main text-light-dark"
+      >
+        <a-col :span="2">
+          {{ column.vagon }}
+        </a-col>
+        <a-col :span="4">
+          {{ column.type }}
+        </a-col>
+        <a-col :span="6">
+          {{ column.class }}
+        </a-col>
+        <a-col :span="4">
+          {{ column.numPlace }}
+        </a-col>
+        <a-col :span="4">
+          {{ column.price }}
+        </a-col>
+        <a-col :span="4">
+          {{ column.action }}
+        </a-col>
+      </a-row>
+
+      <div class="">
+        <div v-for="(row, i) of dataSource" :key="i">
+          <a-row
+            class="flex justify-between px-4 py-2 text-sm bg-white text-light-dark"
+            :class="i == 0 ? '' : 'border-t '"
+          >
+            <a-col :span="2" class="font-bold text-bold-dark">
+              {{ row.vagon }}
+            </a-col>
+            <a-col :span="4">
+              {{ row.type }}
+            </a-col>
+            <a-col :span="6">
+              {{ row.class }}
+            </a-col>
+            <a-col :span="4">
+              <p class="h-full mb-0">
+                {{ row.numPlace }}
+              </p>
+            </a-col>
+            <a-col :span="4">
+              <p>
+                {{ row.price }}
+              </p>
+            </a-col>
+            <a-col :span="4">
+              <a-button
+                class="border-bold-blue/80 text-bold-blue/80 hover:!border-bold-blue hover:!text-bold-blue font-semibold"
+                @click="toggleSelectPlace(i)"
+                >Выбрать места</a-button
+              >
+            </a-col>
+          </a-row>
+
+          <kupe-card v-if="selectPlace == i" />
+        </div>
+      </div>
+    </div>
+    <div class="flex flex-col mt-4 lg:hidden gap-y-2" v-if="show">
+      <div
+        v-for="(col, i) of dataSource"
+        :key="i"
+        class="p-4 px-4 border rounded-lg"
+      >
+        <div
+          class="flex justify-between font-semibold max-sm:text-sm text-bold-dark sm:text-lg"
+        >
+          <span class="flex gap-1">
+            <span class="">{{ col.vagon }}</span>
+            <span class="font-medium text-light-dark">{{ col.type }}</span>
+          </span>
+          <p clas="mb-0 ">{{ col.price }}</p>
+        </div>
+        <p class="mb-2 text-sm text-light-dark">
+          {{ col.class }} {{ col.numPlace }}
+        </p>
+        <a-button
+          class="border-bold-blue/80 text-bold-blue/80 hover:!border-bold-blue hover:!text-bold-blue font-semibold max-sm:w-full mt-2"
+          @click="toggleSelectPlace(i)"
+          >Выбрать места</a-button
+        >
+        <kupe-card v-if="selectPlace == i" />
+      </div>
     </div>
   </div>
 </template>
@@ -184,5 +279,8 @@ const dataSource = [
 }
 .ant-table-wrapper .ant-table-thead > tr > th {
   padding: 8px 16px;
+}
+.ant-popover .ant-popover-inner {
+  background: #f4f7ff;
 }
 </style>
