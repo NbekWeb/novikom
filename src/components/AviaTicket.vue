@@ -81,22 +81,24 @@ import TicketCard from "./TicketCard.vue";
               </span>
             </div>
           </div>
-          <div class="max-xl:hidden">
+          <div class=" max-xl:hidden xl:ml-4">
             <button class="h-full text-white rounded bg-bold-blue">
-              <span class="flex items-center gap-2 px-16 py-2">
+              <span class="flex items-center gap-2 px-16 py-2 xl:px-10 ">
                 <icon-search />
                 <span>Найти</span>
               </span>
             </button>
           </div>
         </div>
-        <div class="mt-20 max-xl:hidden max-lg:flex max-lg:w-full max-sm:mt-44 max-sm:mx-1">
+        <div
+          class="mt-20 lg:hidden max-lg:flex max-lg:w-full max-sm:mt-44 max-sm:mx-1"
+        >
           <button class="h-full text-white rounded bg-bold-blue max-lg:w-full">
             <span
               class="flex items-center gap-2 px-16 py-2 max-lg:justify-center"
             >
               <icon-search />
-              <span>Найти</span>
+              <span>Найти </span>
             </span>
           </button>
         </div>
@@ -122,9 +124,7 @@ import TicketCard from "./TicketCard.vue";
         </div>
       </div>
     </div>
-    <div
-      class="container flex flex-col px-5 pb-10 mx-auto mt-4 gap-y-4 "
-    >
+    <div class="container flex flex-col px-5 pb-10 mx-auto mt-4 gap-y-4">
       <ticket-card />
       <ticket-card />
       <ticket-card />
