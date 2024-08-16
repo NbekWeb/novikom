@@ -177,6 +177,10 @@ const handleSelect = (i) => {
   border-color: #55246a;
 }
 
+.all .ant-checkbox {
+  transform: scale(1.5);
+}
+
 ::-webkit-scrollbar {
   width: 4px;
   height: 4px;

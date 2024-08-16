@@ -68,15 +68,15 @@ const dataSource = [
 ];
 </script>
 <template>
-  <div class="p-4 border rounded-lg">
+  <div class="p-6 border rounded-lg border-bor max-xl:p-4">
     <div class="flex items-center justify-between max-lg:hidden">
       <div class="flex-grow">
-        <p class="text-xl font-semibold text-light-dark">
-          804Ч <span class="text-bold-dark"> асточка-премиум</span>
+        <p class="font-semibold sm:text-sm text-light-dark max-sm:text-base">
+          804Ч <span class="max-sm:text-bold-dark"> асточка-премиум</span>
         </p>
         <div class="flex justify-between mt-4">
           <div class="flex flex-col gap-0 text-sm text-light-dark">
-            <span class="mb-2 text-2xl font-medium text-bold-dark">
+            <span class="mb-2 text-xl font-medium text-bold-dark">
               06:32
             </span>
             <span> Санкт-Петербург Ладож. </span>
@@ -90,19 +90,19 @@ const dataSource = [
             <icon-train />
           </div>
           <div class="flex flex-col items-end gap-0 text-sm text-light-dark">
-            <span class="mb-2 text-2xl font-medium text-bold-dark">11:57 </span>
+            <span class="mb-2 text-xl font-medium text-bold-dark">11:57 </span>
             <span>Петрозаводск-Пасс</span>
             <span>18 мая, сб</span>
           </div>
           <div
             class="flex flex-col items-end justify-between text-sm text-light-dark"
           >
-            <span class="mb-2 text-2xl font-medium text-bold-dark"
+            <span class="mb-2 text-xl font-medium text-bold-dark"
               >8д 14ч 20м
             </span>
             <a-popover placement="bottom" class="">
               <template #content>
-                <p class="mb-0 max-w-[230px]">
+                <p class="mb-0 max-w-[230px] text-xs">
                   Доступна электронная регистрация. С ней для посадки в поезд
                   понадобится только
                 </p>
@@ -117,13 +117,13 @@ const dataSource = [
       </div>
       <div class="pl-6 ml-4 border-l">
         <div class="flex flex-col gap-0 text-xs text-light-dark">
-          <span class="text-lg font-semibold text-bold-dark">
+          <span class="text-2xl font-semibold text-bold-dark">
             от 113 796,00
           </span>
-          <span class="-mt-2"> за всех пассажиров </span>
+          <span class="-mt-1 text-xs"> за всех пассажиров </span>
         </div>
         <button
-          class="px-10 py-2 mt-5 border rounded border-bold-blue"
+          class="px-10 py-2 mt-5 text-base border rounded-lg border-bold-blue"
           :class="show ? 'bg-main text-bold-dark' : 'text-white bg-bold-blue'"
           @click="toggleShow"
         >
@@ -134,7 +134,7 @@ const dataSource = [
     </div>
     <div class="lg:hidden">
       <div class="flex items-center justify-between">
-        <p class="mb-0 text-xl font-semibold text-light-dark max-xs:text-base">
+        <p class="mb-0 text-xl font-semibold text-light-dark max-sm:text-base">
           804Ч <span class="text-bold-dark"> асточка-премиум</span>
         </p>
         <a-popover placement="bottomRight" class="">
@@ -144,7 +144,7 @@ const dataSource = [
               понадобится только
             </p>
           </template>
-          <span class="flex items-center gap-1 text-sm">
+          <span class="flex items-center gap-1 text-base">
             <icon-email class="max-sm:text-xl" />
             <span class="max-sm:hidden"> Электронная регистрация </span>
             <span class="sm:hidden"> Эл.рег. </span>
@@ -171,7 +171,7 @@ const dataSource = [
         <p>Санкт-Петербург, Санкт-Петербург Ладож.</p>
       </div>
       <button
-        class="px-10 py-2 mt-5 border rounded max-sm:w-full border-bold-blue"
+        class="px-10 py-2 mt-5 text-base border rounded max-sm:w-full border-bold-blue"
         :class="show ? 'bg-main text-bold-dark' : 'text-white bg-bold-blue '"
         @click="toggleShow"
       >
@@ -240,14 +240,14 @@ const dataSource = [
         </div>
       </div>
     </div>
-    <div class="flex flex-col mt-4 lg:hidden gap-y-2" v-if="show">
+    <div class="flex flex-col mt-4 text-sm lg:hidden gap-y-2" v-if="show">
       <div
         v-for="(col, i) of dataSource"
         :key="i"
         class="p-4 px-4 border rounded-lg"
       >
         <div
-          class="flex justify-between font-semibold max-sm:text-sm text-bold-dark sm:text-lg"
+          class="flex justify-between text-sm font-semibold text-bold-dark "
         >
           <span class="flex gap-1">
             <span class="">{{ col.vagon }}</span>

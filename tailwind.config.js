@@ -16,12 +16,18 @@ module.exports = {
         "light-blue": "#d8dff3",
         "light-grey": "#E7EBF4",
         "back-blue": "#DEE0E7",
-        pink:'#FAA1CC',
-        green:'#B1FBB4',
-        'bold-pink':'#55246A'
+        pink: "#FAA1CC",
+        green: "#B1FBB4",
+        bor: "#e6e6e6",
+        "bold-pink": "#55246A",
       },
       spacing: {
         "40x": "40%",
+        50:'200px',
+        62:'248px',
+        70:'280px',
+        140: "560px",
+        
       },
       width: {
         half: "calc(50% - 12px)",
@@ -34,7 +40,7 @@ module.exports = {
         center: true,
         padding: "1rem",
         screens: {
-          lg: "1180px",
+          lg: "1185px",
         },
       },
     },

@@ -1,7 +1,20 @@
 @import "./tailwind.css";
 
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../font/gilroy.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'CustomFontName', sans-serif;
+}
+
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Gilroy', sans-serif;
 }
