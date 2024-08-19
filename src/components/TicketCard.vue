@@ -145,7 +145,7 @@ const dataSource = [
         <span>от 113 796,00 </span>
       </button>
       <div class="flex items-center justify-between">
-        <p class="mb-0 text-xl font-semibold text-light-dark max-sm:text-base">
+        <p class="mb-0  font-semibold text-light-dark text-sm">
           804Ч <span class="text-bold-dark"> асточка-премиум</span>
         </p>
         <a-popover placement="bottomRight" class="">
@@ -155,7 +155,9 @@ const dataSource = [
               понадобится только
             </p>
           </template>
-          <span class="flex items-center gap-1 text-base">
+          <span
+            class="flex items-center gap-1 text-base underline-offset-1 underline text-light-dark text-xs"
+          >
             <icon-email class="max-sm:text-xl" />
             <span class="max-sm:hidden"> Электронная регистрация </span>
             <span class="sm:hidden"> Эл.рег. </span>

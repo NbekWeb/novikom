@@ -16,7 +16,7 @@ import TicketCard from "./TicketCard.vue";
         <p class="text-lg font-medium text-bold-blue">Путешествия</p>
       </div>
     </div>
-    <div class="container mx-auto max-xl:px-5 max-sm:px-4  xl:px-0">
+    <div class="container mx-auto max-xl:px-[15px]  xl:px-0">
       <div
         class="flex items-center gap-2 my-3 text-sm font-medium text-light-dark w-full  "
       >
@@ -94,7 +94,7 @@ import TicketCard from "./TicketCard.vue";
             </button>
           </div>
         </div>
-        <div class="px-1 sm:hidden max-sm:flex max-sm:w-full max-sm:mt-11">
+        <div class="px-1 sm:hidden max-sm:flex max-sm:w-full max-sm:mt-12">
           <!-- max-sm:mt-44 -->
           <button class="w-full h-[43px] mb-4 text-white rounded-lg bg-bold-blue ">
             <span class="flex items-center justify-center gap-2 ">
@@ -128,7 +128,7 @@ import TicketCard from "./TicketCard.vue";
         </div>
       </div>
     </div>
-    <div class="container flex flex-col max-xl:px-5 pb-10 mx-auto mt-4 gap-y-4 xl:px-0">
+    <div class="container flex flex-col max-xl:px-[15px] pb-10 mx-auto mt-4 gap-y-4 xl:px-0">
       <ticket-card />
       <ticket-card />
       <ticket-card />
