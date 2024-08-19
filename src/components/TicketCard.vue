@@ -69,27 +69,29 @@ const dataSource = [
 </script>
 <template>
   <div class="p-6 border rounded-lg border-bor max-xl:p-4">
-    <div class="flex items-center justify-between max-lg:hidden">
+    <div class="flex items-center justify-between max-xl:hidden">
       <div class="flex-grow">
-        <p class="font-semibold sm:text-sm text-light-dark max-sm:text-base">
+        <p class="font-bold sm:text-sm text-light-dark max-sm:text-base">
           804Ч <span class="max-sm:text-bold-dark"> асточка-премиум</span>
         </p>
-        <div class="flex justify-between mt-4">
-          <div class="flex flex-col gap-0 text-sm text-light-dark">
-            <span class="mb-2 text-xl font-medium text-bold-dark">
-              06:32
-            </span>
+        <div class="flex mt-4">
+          <div class="flex flex-col gap-0 text-sm text-light-dark pr-[45px]">
+            <span class="mb-2 text-xl font-medium text-bold-dark"> 06:32 </span>
             <span> Санкт-Петербург Ладож. </span>
             <span> 18 мая, сб </span>
           </div>
-          <div class="flex items-center gap-2 text-sm text-light-dark">
+          <div
+            class="flex items-center gap-2 text-sm text-light-dark pr-[100px]"
+          >
             <icon-circle />
             <icon-dots />
             <span>14ч20м</span>
             <icon-dots />
             <icon-train />
           </div>
-          <div class="flex flex-col items-end gap-0 text-sm text-light-dark">
+          <div
+            class="flex flex-col items-end gap-0 text-sm text-light-dark pr-[60px]"
+          >
             <span class="mb-2 text-xl font-medium text-bold-dark">11:57 </span>
             <span>Петрозаводск-Пасс</span>
             <span>18 мая, сб</span>
@@ -100,14 +102,16 @@ const dataSource = [
             <span class="mb-2 text-xl font-medium text-bold-dark"
               >8д 14ч 20м
             </span>
-            <a-popover placement="bottom" class="">
+            <a-popover placement="bottom" class="" >
               <template #content>
                 <p class="mb-0 max-w-[230px] text-xs">
                   Доступна электронная регистрация. С ней для посадки в поезд
                   понадобится только
                 </p>
               </template>
-              <span class="flex items-center gap-1">
+              <span
+                class="flex items-center gap-1 text-xs underline-offset-1 underline"
+              >
                 <icon-email />
                 Электронная регистрация</span
               >
@@ -115,7 +119,7 @@ const dataSource = [
           </div>
         </div>
       </div>
-      <div class="pl-6 ml-4 border-l">
+      <div class="pl-[34px] ml-[10px] border-l">
         <div class="flex flex-col gap-0 text-xs text-light-dark">
           <span class="text-2xl font-semibold text-bold-dark">
             от 113 796,00
@@ -123,7 +127,7 @@ const dataSource = [
           <span class="-mt-1 text-xs"> за всех пассажиров </span>
         </div>
         <button
-          class="px-10 py-2 mt-5 text-base border rounded-lg border-bold-blue"
+          class="w-[169px] py-2 mt-5 text-base border rounded-lg border-bold-blue"
           :class="show ? 'bg-main text-bold-dark' : 'text-white bg-bold-blue'"
           @click="toggleShow"
         >
@@ -132,7 +136,7 @@ const dataSource = [
         </button>
       </div>
     </div>
-    <div class="lg:hidden">
+    <div class="xl:hidden">
       <div class="flex items-center justify-between">
         <p class="mb-0 text-xl font-semibold text-light-dark max-sm:text-base">
           804Ч <span class="text-bold-dark"> асточка-премиум</span>
@@ -175,7 +179,7 @@ const dataSource = [
         :class="show ? 'bg-main text-bold-dark' : 'text-white bg-bold-blue '"
         @click="toggleShow"
       >
-        <span>от 113 796,00</span>
+        <span>от 113 796,00 </span>
       </button>
     </div>
     <div class="flex flex-col pl-2 mt-6 gap-y-0 max-lg:hidden" v-if="show">
@@ -211,7 +215,7 @@ const dataSource = [
             <a-col :span="2" class="font-bold text-bold-dark">
               {{ row.vagon }}
             </a-col>
-            <a-col :span="4">
+            <a-col :span="4" class="text-bold-dark">
               {{ row.type }}
             </a-col>
             <a-col :span="6">
@@ -246,9 +250,7 @@ const dataSource = [
         :key="i"
         class="p-4 px-4 border rounded-lg"
       >
-        <div
-          class="flex justify-between text-sm font-semibold text-bold-dark "
-        >
+        <div class="flex justify-between text-sm font-semibold text-bold-dark">
           <span class="flex gap-1">
             <span class="">{{ col.vagon }}</span>
             <span class="font-medium text-light-dark">{{ col.type }}</span>
@@ -281,6 +283,9 @@ const dataSource = [
   padding: 8px 16px;
 }
 .ant-popover .ant-popover-inner {
+  background: #f4f7ff;
+}
+.ant-popover .ant-popover-arrow:before{
   background: #f4f7ff;
 }
 </style>
