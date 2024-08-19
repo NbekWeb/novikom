@@ -128,7 +128,7 @@ import TicketCard from "./TicketCard.vue";
         </div>
       </div>
     </div>
-    <div class="container flex flex-col max-xl:px-5 pb-10 mx-auto mt-4 gap-y-[25px] xl:px-0">
+    <div class="container flex flex-col max-xl:px-5 pb-10 mx-auto mt-4 gap-y-4 xl:px-0">
       <ticket-card />
       <ticket-card />
       <ticket-card />

@@ -102,7 +102,7 @@ const dataSource = [
             <span class="mb-2 text-xl font-medium text-bold-dark"
               >8д 14ч 20м
             </span>
-            <a-popover placement="bottom" class="" >
+            <a-popover placement="bottom" class="">
               <template #content>
                 <p class="mb-0 max-w-[230px] text-xs">
                   Доступна электронная регистрация. С ней для посадки в поезд
@@ -137,6 +137,13 @@ const dataSource = [
       </div>
     </div>
     <div class="xl:hidden">
+      <button
+        class="px-10 py-2 mb-4 text-base border rounded max-sm:w-full border-bold-blue"
+        :class="show ? 'text-white bg-bold-blue ' : ' hidden'"
+        @click="toggleShow"
+      >
+        <span>от 113 796,00 </span>
+      </button>
       <div class="flex items-center justify-between">
         <p class="mb-0 text-xl font-semibold text-light-dark max-sm:text-base">
           804Ч <span class="text-bold-dark"> асточка-премиум</span>
@@ -176,32 +183,32 @@ const dataSource = [
       </div>
       <button
         class="px-10 py-2 mt-5 text-base border rounded max-sm:w-full border-bold-blue"
-        :class="show ? 'bg-main text-bold-dark' : 'text-white bg-bold-blue '"
+        :class="show ? 'hidden' : 'text-white bg-bold-blue '"
         @click="toggleShow"
       >
         <span>от 113 796,00 </span>
       </button>
     </div>
-    <div class="flex flex-col pl-2 mt-6 gap-y-0 max-lg:hidden" v-if="show">
+    <div class="flex flex-col pl-2 mt-[70px] gap-y-0 max-lg:hidden" v-if="show">
       <a-row
         class="flex justify-between px-4 py-2 text-sm rounded-lg bg-main text-light-dark"
       >
-        <a-col :span="2">
+        <a-col class="w-[76px]">
           {{ column.vagon }}
         </a-col>
-        <a-col :span="4">
+        <a-col class="w-[100px]">
           {{ column.type }}
         </a-col>
-        <a-col :span="6">
+        <a-col class="w-[255px] pr-5">
           {{ column.class }}
         </a-col>
-        <a-col :span="4">
+        <a-col class="w-[155px] pr-9">
           {{ column.numPlace }}
         </a-col>
-        <a-col :span="4">
+        <a-col class="w-[130px] pr-5">
           {{ column.price }}
         </a-col>
-        <a-col :span="4">
+        <a-col class="w-[162px]">
           {{ column.action }}
         </a-col>
       </a-row>
@@ -209,29 +216,29 @@ const dataSource = [
       <div class="">
         <div v-for="(row, i) of dataSource" :key="i">
           <a-row
-            class="flex justify-between px-4 py-2 text-sm bg-white text-light-dark"
-            :class="i == 0 ? '' : 'border-t '"
+            class="flex justify-between px-4 pb-4 text-sm bg-white text-light-dark"
+            :class="i == 0 ? 'pt-[23px]' : 'border-t pt-4'"
           >
-            <a-col :span="2" class="font-bold text-bold-dark">
+            <a-col class="font-bold text-bold-dark w-[76px]">
               {{ row.vagon }}
             </a-col>
-            <a-col :span="4" class="text-bold-dark">
+            <a-col class="text-bold-dark w-[100px]">
               {{ row.type }}
             </a-col>
-            <a-col :span="6">
+            <a-col class="w-[255px] pr-5">
               {{ row.class }}
             </a-col>
-            <a-col :span="4">
+            <a-col class="w-[155px] pr-9">
               <p class="h-full mb-0">
                 {{ row.numPlace }}
               </p>
             </a-col>
-            <a-col :span="4">
+            <a-col class="w-[130px] pr-5">
               <p>
                 {{ row.price }}
               </p>
             </a-col>
-            <a-col :span="4">
+            <a-col class="w-[162px]">
               <a-button
                 class="border-bold-blue/80 text-bold-blue/80 hover:!border-bold-blue hover:!text-bold-blue font-semibold"
                 @click="toggleSelectPlace(i)"
@@ -285,7 +292,7 @@ const dataSource = [
 .ant-popover .ant-popover-inner {
   background: #f4f7ff;
 }
-.ant-popover .ant-popover-arrow:before{
+.ant-popover .ant-popover-arrow:before {
   background: #f4f7ff;
 }
 </style>
