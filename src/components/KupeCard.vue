@@ -94,11 +94,13 @@ const handleSelect = (i) => {
           <a-checkbox v-model:checked="even">Смешаное купе</a-checkbox>
         </span>
       </div>
-      <span class="all">
-        <a-checkbox v-model:checked="all">
-          С бельём, включено в стоимость билета
-        </a-checkbox>
-      </span>
+      <div class="mt-4">
+        <span class="all">
+          <a-checkbox v-model:checked="all">
+            С бельём, включено в стоимость билета
+          </a-checkbox>
+        </span>
+      </div>
     </div>
   </div>
 </template>
