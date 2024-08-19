@@ -138,7 +138,7 @@ const dataSource = [
     </div>
     <div class="xl:hidden">
       <button
-        class="px-10 py-2 mb-4 text-base border rounded max-sm:w-full border-bold-blue"
+        class="px-10 h-[43px] mb-4 text-base border rounded-lg max-sm:w-full border-bold-blue"
         :class="show ? 'text-white bg-bold-blue ' : ' hidden'"
         @click="toggleShow"
       >
@@ -167,7 +167,7 @@ const dataSource = [
       >
         <span>06:32</span>
         <span
-          class="flex items-center flex-grow gap-1 text-xs font-normal text-light-dark"
+          class="flex items-center flex-grow gap-2 text-xs font-normal text-light-dark px-3 max-sm:text-[10px]"
         >
           <span class="min-w-16 h-[1px] bg-light-dark/60 flex-grow"></span>
           <span>14ч20м</span>
@@ -176,13 +176,13 @@ const dataSource = [
         <span>09:32</span>
       </div>
       <div
-        class="flex justify-between gap-3 mt-2 text-xs text-light-dark max-sm:gap-2"
+        class="flex justify-between gap-3 mt-2 text-xs text-light-dark max-sm:gap-2 mb-4"
       >
-        <p>Санкт-Петербург, Санкт-Петербург Ладож.</p>
-        <p>Санкт-Петербург, Санкт-Петербург Ладож.</p>
+        <p class="mb-0">Санкт-Петербург, Санкт-Петербург Ладож.</p>
+        <p class="mb-0">Санкт-Петербург, Санкт-Петербург Ладож.</p>
       </div>
       <button
-        class="px-10 py-2 mt-5 text-base border rounded max-sm:w-full border-bold-blue"
+        class="px-10 h-[43px] text-base border rounded-lg max-sm:w-full border-bold-blue"
         :class="show ? 'hidden' : 'text-white bg-bold-blue '"
         @click="toggleShow"
       >
@@ -240,10 +240,10 @@ const dataSource = [
             </a-col>
             <a-col class="w-[162px]">
               <a-button
-                class="border-bold-blue/80 text-bold-blue/80 hover:!border-bold-blue hover:!text-bold-blue font-semibold"
+                class="border-bold-blue/80 text-bold-blue/80 hover:!border-bold-blue hover:!text-bold-blue font-semibold !h-[43px]"
                 @click="toggleSelectPlace(i)"
-                >Выбрать места</a-button
-              >
+                >Выбрать места
+              </a-button>
             </a-col>
           </a-row>
 
@@ -268,7 +268,7 @@ const dataSource = [
           {{ col.class }} {{ col.numPlace }}
         </p>
         <a-button
-          class="border-bold-blue/80 text-bold-blue/80 hover:!border-bold-blue hover:!text-bold-blue font-semibold max-sm:w-full mt-2"
+          class="border-bold-blue/80 text-bold-blue/80 hover:!border-bold-blue hover:!text-bold-blue font-semibold max-sm:w-full mt-2 h-[43px]"
           @click="toggleSelectPlace(i)"
           >Выбрать места</a-button
         >
