@@ -35,7 +35,7 @@ import TicketCard from "./TicketCard.vue";
         </div>
         <div class="flex items-center justify-between mt-4">
           <div
-            class="flex w-full my-3 bg-white rounded max-lg:flex-wrap border-bor max-lg:bg-transparent max-sm:border-none max-w-max"
+            class="flex w-full my-3 bg-white h-10 rounded max-lg:flex-wrap border-bor max-lg:bg-transparent max-sm:border-none max-w-max"
           >
             <div
               class="relative flex flex-wrap max-sm:px-1 max-lg:w-max gap-y-2 max-sm:w-full"
@@ -57,7 +57,7 @@ import TicketCard from "./TicketCard.vue";
               </span>
             </div>
             <div
-              class="flex flex-wrap h-full mt-4 max-lg:w-full max-lg:gap-4 max-sm:gap-2 max-sm:mt-2"
+              class="flex flex-wrap h-10 mt-0 max-lg:w-full max-lg:gap-4 max-sm:gap-2 max-sm:mt-2"
             >
               <span
                 class="flex items-center justify-between  gap-2 px-4 max-sm:px-2 max-sm:mx-1 max-sm:rounded-xl h-10 border-x max-lg:bg-white max-lg:border max-lg:rounded-lg max-lg:w-62 max-sm:w-full lg:w-[180px] border-bor"
