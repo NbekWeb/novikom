@@ -89,14 +89,14 @@ import TicketCard from "./TicketCard.vue";
             >
               <span class="flex items-center justify-center w-full gap-2 py-2">
                 <icon-search />
-                <span>Найти </span>
+                <span>Найти  </span>
               </span>
             </button>
           </div>
         </div>
-        <div class="pl-[1px] sm:hidden max-sm:flex max-sm:w-full">
+        <div class="pl-[1px] sm:hidden max-sm:flex max-sm:w-full max-sm:mt-11">
           <!-- max-sm:mt-44 -->
-          <button class="w-full h-full mb-4 text-white rounded-lg bg-bold-blue">
+          <button class="w-full h-full mb-4 text-white rounded-lg bg-bold-blue ">
             <span class="flex items-center justify-center gap-2 py-2">
               <icon-search />
               <span>Найти </span>
