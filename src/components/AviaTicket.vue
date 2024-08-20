@@ -9,7 +9,7 @@ import IconLocs from "./icons/IconLocs.vue";
 import TicketCard from "./TicketCard.vue";
 </script>
 <template>
-  <div class=" " >
+  <div class="" >
     <div class="py-4 bg-main">
       <div class="flex flex-col items-center">
         <h2 class="text-3xl font-semibold">Aвиабилеты</h2>
@@ -18,7 +18,7 @@ import TicketCard from "./TicketCard.vue";
     </div>
     <div class="container mx-auto max-xl:px-[15px]  xl:px-0">
       <div
-        class="flex items-center gap-2 my-3 text-sm font-medium text-light-dark w-full  "
+        class="flex items-center w-full gap-2 my-3 text-sm font-medium text-light-dark "
       >
         <span>Главная</span>
         <div class="flex items-center gap-2">
@@ -35,7 +35,7 @@ import TicketCard from "./TicketCard.vue";
         </div>
         <div class="flex items-center justify-between mt-4">
           <div
-            class="flex w-full my-3 bg-white lg:h-10  rounded max-lg:flex-wrap border-bor max-lg:bg-transparent max-sm:border-none max-w-max"
+            class="flex w-full my-3 bg-white rounded lg:h-10 max-lg:flex-wrap border-bor max-lg:bg-transparent max-sm:border-none max-w-max"
           >
             <div
               class="relative flex flex-wrap max-sm:px-1 max-lg:w-max gap-y-2 max-sm:w-full "
@@ -43,12 +43,12 @@ import TicketCard from "./TicketCard.vue";
               <input
                 type="text"
                 placeholder="Станция отправления"
-                class="h-10 px-4  border-bor rounded-l-lg border outline-none max-sm:w-full max-sm:rounded-xl max-sm:px-2 max-lg:border lg:w-70 max-lg:w-64"
+                class="h-10 px-4 border rounded-l-lg outline-none border-bor max-sm:w-full max-sm:rounded-xl max-sm:px-2 max-lg:border lg:w-70 max-lg:w-64"
               />
               <input
                 type="text"
                 placeholder="Станция прибытия"
-                class="h-10 pl-5 border-bor border max-lg:rounded-r-lg outline-none max-lg:w-64 max-sm:w-full max-sm:rounded-xl max-sm:px-2 max-lg:border lg:w-70"
+                class="h-10 pl-5 border outline-none border-bor max-lg:rounded-r-lg max-lg:w-64 max-sm:w-full max-sm:rounded-xl max-sm:px-2 max-lg:border lg:w-70"
               /> 
               <span
                 class="absolute flex items-center justify-center w-8 h-8 -ml-4 text-lg bg-white border rounded-full text-bold-blue left-1/2 top-1 border-bor max-sm:top-5 max-sm:mt-2"
@@ -87,14 +87,14 @@ import TicketCard from "./TicketCard.vue";
             <button
               class="flex h-10 text-white rounded-lg bg-bold-blue w-50 max-lg:w-40 "
             >
-              <span class="flex items-center justify-center w-full gap-2 gap-y-2 h-full">
+              <span class="flex items-center justify-center w-full h-full gap-2 gap-y-2">
                 <icon-search />
                 <span>Найти  </span>
               </span>
             </button>
           </div>
         </div>
-        <div class="px-1 sm:hidden max-sm:flex max-sm:w-full max-sm:mt-12">
+        <div class="px-1 sm:hidden max-sm:flex max-sm:w-full max-sm:mt-12 ">
           <!-- max-sm:mt-44 -->
           <button class="w-full h-[43px] mb-4 text-white rounded-lg bg-bold-blue ">
             <span class="flex items-center justify-center gap-2 ">
@@ -128,7 +128,7 @@ import TicketCard from "./TicketCard.vue";
         </div>
       </div>
     </div>
-    <div class="container flex flex-col max-xl:px-[15px] pb-10 mx-auto mt-4 gap-y-4 xl:px-0">
+    <div class="container flex flex-col max-xl:px-[15px] pb-10 mx-auto mt-4 xl:gap-y-6 max-xl:gap-y-4 xl:px-0">
       <ticket-card />
       <ticket-card />
       <ticket-card />
