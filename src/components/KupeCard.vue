@@ -86,7 +86,7 @@ const handleSelect = (i) => {
       <div class="flex flex-wrap gap-4 mb-2 max-sm:justify-center">
         <span class="women">
           <a-checkbox v-model:checked="women">
-            <span class="text-sm text-light-dark"> Женское купе </span>
+            <span class="text-sm text-light-dark">Женское купе </span>
           </a-checkbox>
         </span>
         <span class="men">
