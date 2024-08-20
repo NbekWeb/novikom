@@ -85,19 +85,26 @@ const handleSelect = (i) => {
     <div class="mt-4">
       <div class="flex flex-wrap gap-4 mb-2 max-sm:justify-center">
         <span class="women">
-          <a-checkbox v-model:checked="women">Женское купе</a-checkbox>
+          <a-checkbox v-model:checked="women">
+            <span class="text-sm text-light-dark"> Женское купе </span>
+          </a-checkbox>
         </span>
         <span class="men">
           <a-checkbox v-model:checked="men">Мужское купе</a-checkbox>
         </span>
         <span class="even">
-          <a-checkbox v-model:checked="even">Смешаное купе</a-checkbox>
+          <a-checkbox v-model:checked="even">
+            <span class="text-sm text-light-dark"> Смешаное купе </span>
+          </a-checkbox>
         </span>
       </div>
       <div class="mt-4">
         <span class="all">
           <a-checkbox v-model:checked="all">
-            С бельём, включено в стоимость билета
+            <span class="text-sm text-bold-dark">
+              
+              С бельём, включено в стоимость билета
+            </span>
           </a-checkbox>
         </span>
       </div>

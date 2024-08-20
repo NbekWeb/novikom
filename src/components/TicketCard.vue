@@ -178,7 +178,7 @@ const dataSource = [
         <span>09:32</span>
       </div>
       <div
-        class="flex justify-between gap-3 mt-2 mb-4 text-xs text-light-dark max-sm:gap-2"
+        class="flex justify-between gap-3 mt-2 mb-4 text-xs text-light-dark max-sm:gap-2 max-sm:text-[10px]"
       >
         <p class="mb-0">Санкт-Петербург, Санкт-Петербург Ладож.</p>
         <p class="mb-0">Санкт-Петербург, Санкт-Петербург Ладож.</p>
