@@ -110,7 +110,7 @@ const dataSource = [
                 </p>
               </template>
               <span
-                class="flex items-center gap-1 text-xs underline-offset-1 underline"
+                class="flex items-center gap-1 text-xs underline underline-offset-1"
               >
                 <icon-email />
                 Электронная регистрация</span
@@ -145,7 +145,7 @@ const dataSource = [
         <span>от 113 796,00 </span>
       </button>
       <div class="flex items-center justify-between">
-        <p class="mb-0  font-semibold text-light-dark text-sm">
+        <p class="mb-0 text-sm font-semibold text-light-dark">
           804Ч <span class="text-bold-dark"> асточка-премиум</span>
         </p>
         <a-popover placement="bottomRight" class="">
@@ -156,7 +156,7 @@ const dataSource = [
             </p>
           </template>
           <span
-            class="flex items-center gap-1 text-base underline-offset-1 underline text-light-dark text-xs"
+            class="flex items-center gap-1 text-xs text-base underline underline-offset-1 text-light-dark"
           >
             <icon-email class="max-sm:text-xl" />
             <span class="max-sm:hidden"> Электронная регистрация </span>
@@ -178,7 +178,7 @@ const dataSource = [
         <span>09:32</span>
       </div>
       <div
-        class="flex justify-between gap-3 mt-2 text-xs text-light-dark max-sm:gap-2 mb-4"
+        class="flex justify-between gap-3 mt-2 mb-4 text-xs text-light-dark max-sm:gap-2"
       >
         <p class="mb-0">Санкт-Петербург, Санкт-Петербург Ладож.</p>
         <p class="mb-0">Санкт-Петербург, Санкт-Петербург Ладож.</p>
@@ -193,7 +193,7 @@ const dataSource = [
     </div>
     <div class="flex flex-col pl-2 mt-[70px] gap-y-0 max-lg:hidden" v-if="show">
       <a-row
-        class="flex justify-between px-4 py-2 text-sm rounded-lg bg-main text-light-dark"
+        class="flex items-center justify-between h-10 px-4 text-sm rounded-lg bg-main text-light-dark"
       >
         <a-col class="w-[76px]">
           {{ column.vagon }}
@@ -201,13 +201,13 @@ const dataSource = [
         <a-col class="w-[100px]">
           {{ column.type }}
         </a-col>
-        <a-col class="w-[255px] pr-5">
+        <a-col class="w-[265px] mr-5">
           {{ column.class }}
         </a-col>
-        <a-col class="w-[155px] pr-9">
+        <a-col class="w-[155px] mr-9">
           {{ column.numPlace }}
         </a-col>
-        <a-col class="w-[130px] pr-5">
+        <a-col class="w-[130px] mr-5">
           {{ column.price }}
         </a-col>
         <a-col class="w-[162px]">
@@ -227,22 +227,22 @@ const dataSource = [
             <a-col class="text-bold-dark w-[100px]">
               {{ row.type }}
             </a-col>
-            <a-col class="w-[255px] pr-5">
+            <a-col class="w-[265px] mr-5">
               {{ row.class }}
             </a-col>
-            <a-col class="w-[155px] pr-9">
-              <p class="h-full mb-0">
+            <a-col class="w-[155px] mr-9">
+              <p class="w-full h-full mb-0 text-sm">
                 {{ row.numPlace }}
               </p>
             </a-col>
-            <a-col class="w-[130px] pr-5">
-              <p>
+            <a-col class="w-[130px] mr-5">
+              <p class="mb-0 text-[15px] text-bold-dark font-semibold w-full">
                 {{ row.price }}
               </p>
             </a-col>
             <a-col class="w-[162px]">
               <a-button
-                class="border-bold-blue/80 text-bold-blue/80 hover:!border-bold-blue hover:!text-bold-blue font-semibold !h-[43px]"
+                class="border-bold-blue/80 text-bold-blue/80 hover:!border-bold-blue hover:!text-bold-blue font-semibold !h-10 w-full"
                 @click="toggleSelectPlace(i)"
                 >Выбрать места
               </a-button>

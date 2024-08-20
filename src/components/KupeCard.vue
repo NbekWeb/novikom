@@ -37,7 +37,7 @@ const handleSelect = (i) => {
           class="w-[76px] h-20 text-light-grey border-x-2 border-light-grey flex gap-1 items-center bg-white px-1 justify-center"
         >
           <div
-            class="flex flex-col items-center justify-between px-1 py-2 text-sm rounded min-w-7 group text-light-blue hover:bg-bold-blue hover:text-white"
+            class="flex flex-col items-center justify-between px-1 py-2 text-sm border-2 rounded min-w-8 group text-light-blue hover:bg-bold-blue hover:text-white border-main h-[68px]"
             :class="selected == 2 * i - 1 ? 'bg-bold-blue' : 'bg-main'"
             @click="handleSelect(2 * i - 1)"
           >
