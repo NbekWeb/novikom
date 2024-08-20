@@ -260,9 +260,9 @@ const dataSource = [
         class="p-4 px-4 border rounded-lg"
       >
         <div class="flex justify-between text-sm font-semibold text-bold-dark">
-          <span class="flex gap-1">
-            <span class="">{{ col.vagon }}</span>
-            <span class="font-medium text-light-dark">{{ col.type }}</span>
+          <span class="flex gap-1 text-bold-dark">
+            <span class="text-sm font-bold">{{ col.vagon }}</span>
+            <span class="text-sm font-medium">{{ col.type }}</span>
           </span>
           <p clas="mb-0 ">{{ col.price }}</p>
         </div>

@@ -90,7 +90,9 @@ const handleSelect = (i) => {
           </a-checkbox>
         </span>
         <span class="men">
-          <a-checkbox v-model:checked="men">Мужское купе</a-checkbox>
+          <a-checkbox v-model:checked="men">
+            <span class="text-sm text-light-dark"> Мужское купе </span>
+          </a-checkbox>
         </span>
         <span class="even">
           <a-checkbox v-model:checked="even">
@@ -102,7 +104,6 @@ const handleSelect = (i) => {
         <span class="all">
           <a-checkbox v-model:checked="all">
             <span class="text-sm text-bold-dark">
-              
               С бельём, включено в стоимость билета
             </span>
           </a-checkbox>
